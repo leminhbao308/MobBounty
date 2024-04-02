@@ -1,0 +1,101 @@
+##################################################################
+#                                                                #
+#                     MENU HIỂN THỊ MOB                          #
+#                                                                #
+##################################################################
+mob-menu:
+  rows: 3 # số hàng của menu, tối đa là 6, tối thiểu là 2
+  title: Mob Menu
+  buttons:
+    next-page-item:
+      name: '&bNext Page'
+      material: ARROW
+      lore:
+        - 'Current Page: '
+        - '%current_page% / %total_page%'
+    previous-page-item:
+      name: '&bPrevious Page'
+      material: ARROW
+      lore:
+        - 'Current Page: '
+        - '%current_page% / %total_page%'
+    back-item:
+      name: '&bBack'
+      material: IRON_DOOR
+      lore:
+        - 'Back to Main Menu'
+  item-format:
+    name: "&b%customName% amount has killed"
+    lore:
+      - ' '
+      - '%kills%'
+      - '%customLore%' # thêm custom lore cho mob từ config.yml
+      - '%spawnBiome%' # thêm hiển thị loại biome mà mob spawn từ config.yml
+
+# Tuỳ chọn mob sẽ hiển thị trong mob-menu
+category-title: "§6Test Category" # Tên category menu
+display:
+  custom_category_id_1:
+    test_mob_ID: # Đây là ID của mob
+      custom-name: "§6Test Mob"
+      custom-lore:
+        - "§7Test Mob Lore"
+      spawn-biome: "§7Test Biome"
+categories:
+  custom_category_id_1: "§6Test Category"
+
+
+
+##################################################################
+#                                                                #
+#                MENU HIỂN THỊ BẢNG XẾP HẠNG                     #
+#                                                                #
+##################################################################
+leaderboard-menu:
+  rows: 3 # số hàng của menu, tối đa là 6, tối thiểu là 2
+  title: Leaderboard
+  target: 'AngrySludge' # tên MythicMobs hiển thị data trên menu
+  buttons:
+    next-page-item:
+      name: '&bNext Page'
+      material: ARROW
+      lore:
+        - 'Current Page: '
+        - '%current_page% / %total_page%'
+    previous-page-item:
+      name: '&bPrevious Page'
+      material: ARROW
+      lore:
+        - 'Current Page: '
+        - '%current_page% / %total_page%'
+  item-format:
+    name: "&b%player%'s Rank"
+    lore:
+      - ' '
+      - '%total_kills%'
+      - '%rank%'
+
+
+
+
+##################################################################
+#                                                                #
+#                  MENU HIỂN THỊ VẬT PHẨM DROP                   #
+#                                                                #
+##################################################################
+drop-view-menu:
+    rows: 3 # số hàng của menu, tối đa là 6, tối thiểu là 2
+    title: Drop View
+    buttons:
+      next-page-item:
+        name: '&bNext Page'
+        material: ARROW
+        lore:
+            - 'Current Page: '
+            - '%current_page% / %total_page%'
+      previous-page-item:
+        name: '&bPrevious Page'
+        material: ARROW
+        lore:
+            - 'Current Page: '
+            - '%current_page% / %total_page%'
